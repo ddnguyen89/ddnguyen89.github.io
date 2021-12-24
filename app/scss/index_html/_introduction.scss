@@ -1,0 +1,28 @@
+.intro-container {
+    display: inline-flex;
+    max-width: 50em;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-content: center;
+    gap: 2em;
+    flex: 1;
+}
+
+.intro-tc {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+@media screen and (max-width: 55em) {
+    .intro-container {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        padding: 0 2em 0 2em;
+    }
+}

@@ -1,0 +1,15 @@
+@import "index_html/globals";
+@import "header";
+@import "index_html/home";
+@import "index_html/introduction";
+@import "index_html/interest";
+@import "index_html/projects";
+@import "index_html/resume";
+@import "index_html/contact";
+@import "footer";
+:root {
+    --first-color: #ffffff;
+    --second-color: #151515;
+    --third-color: #fce566;
+    --forth-color: #aaaaaa;
+}

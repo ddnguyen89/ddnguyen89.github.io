@@ -1,0 +1,159 @@
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    background-image: linear-gradient(to bottom, var(--second-color) 75%, transparent);
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.logohead {
+    max-width: fit-content;
+    position: absolute;
+    display: flex;
+    justify-content: start;
+    margin: 0em;
+    padding: 0em;
+    flex: 1;
+}
+
+.logohead a {
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    color: var(--first-color);
+    margin: 1em;
+    padding: 0.25em;
+    z-index: 100;
+}
+
+.logohead a:first-child {
+    justify-content: center;
+    flex: 1;
+}
+
+.logohead a:nth-child(2) {
+    white-space: nowrap;
+    flex: 2;
+}
+
+.toggle {
+    display: none;
+}
+
+.nav-menuc {
+    display: flex;
+    justify-content: end;
+    flex: 2;
+}
+
+.nav-menuc li {
+    list-style: none;
+}
+
+.nav-menu {
+    display: flex;
+    max-width: fit-content;
+    white-space: nowrap;
+    margin: 0em;
+    padding: 0em;
+}
+
+.nav-menu a {
+    flex: 2;
+    display: flex;
+    justify-content: space-around;
+    margin: 1em;
+    padding: 0.25em;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.nav-menu a:not(.contactMeBTN) {
+    color: var(--first-color);
+}
+
+header .logo {
+    height: 3em;
+    vertical-align: middle;
+    margin: -1em -2em -1em 0em;
+}
+
+.contactMeBTN {
+    border: 2px solid var(--third-color);
+    color: var(--third-color);
+    box-shadow: .4em .3em 0 0 var(--third-color);
+    transition: .1s ease-in;
+}
+
+.contactMeBTN:hover {
+    border: 2px solid var(--third-color);
+    box-shadow: 0 0 0 0 var(--third-color);
+    transition: .1s ease-out;
+}
+
+header a,
+header a:after,
+header a:before {
+    transition: all .5s;
+}
+
+header a:hover {
+    color: var(--third-color);
+}
+
+header a {
+    position: relative;
+}
+
+header a:not(.noAni):after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: var(--third-color);
+    height: 1px;
+}
+
+header a:hover:after {
+    width: 100%;
+}
+
+@media screen and (max-width: 55em) {
+    .menu-item {
+        display: none;
+    }
+    .active .menu-item {
+        display: block;
+        width: 100%;
+    }
+    .toggle {
+        display: flex;
+        width: 100%;
+    }
+    .toggle a {
+        justify-content: end;
+    }
+    .logohead {
+        margin: 0em;
+    }
+    .nav-menuc {
+        display: flex;
+        width: 100%;
+        background-image: linear-gradient(to bottom, var(--second-color) 70%, transparent);
+    }
+    .nav-menu {
+        min-width: fit-content;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}

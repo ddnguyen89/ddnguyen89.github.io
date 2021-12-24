@@ -1,0 +1,84 @@
+.contact-container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.contact-bc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-e a {
+    flex: 1;
+    display: inline-block;
+    text-align: center;
+    margin: 1em;
+    padding: 0.25em;
+    text-decoration: none;
+    font-weight: 400;
+    color: var(--first-color);
+}
+
+.contact-e i {
+    margin-left: .5em;
+}
+
+//down arrow
+.down-arrow {
+    font-size: .75em;
+    color: var(--third-color);
+}
+
+//contact email
+.contact-e a,
+.contact-e a:after,
+.contact-e a:before,
+.contact-e i,
+.contact-e i:after,
+.contact-e i:before {
+    transition: all .5s;
+}
+
+.contact-e a {
+    position: relative;
+}
+
+.contact-e a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: var(--third-color);
+    height: 1px;
+}
+
+.contact-e a:hover:after {
+    width: 100%;
+}
+
+.contact-e:hover i {
+    color: var(--third-color);
+    transform: rotate(-10deg);
+}
+
+@media screen and (max-width: 55em) {
+    .contact-container {
+        display: flex;
+        width: 100%;
+        flex-flow: column;
+        align-items: center;
+        padding: 0 2em 0 2em;
+    }
+}

@@ -1,0 +1,143 @@
+.resume-container {
+    display: inline-flex;
+    max-width: 50em;
+    margin-left: auto;
+    margin-right: auto;
+    flex-flow: column;
+    justify-content: center;
+    align-content: center;
+    column-gap: 1em;
+    flex: 1;
+}
+
+.resume-tc,
+.resume-wtc,
+.resume-rtc {
+    display: flex;
+    justify-content: center;
+}
+
+.resume-o,
+.resume-e,
+.resume-c {
+    display: inline-flex;
+    flex: 1;
+    justify-content: center;
+    align-content: center;
+    gap: 1em;
+}
+
+.resume-otc,
+.resume-etc,
+.resume-ctc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.resume-wtc,
+.resume-rtc {
+    margin-bottom: 1em;
+}
+
+.dateLoc {
+    display: flex;
+    justify-content: flex-end;
+    font-weight: 400;
+}
+
+.resume-wbc,
+.resume-cbc {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+}
+
+.resume-cbc img {
+    width: 5em;
+}
+
+.resume-wc {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 40%;
+}
+
+.resume-rstc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.resume-rbc {
+    display: flex;
+    justify-content: center;
+    gap: 2em
+}
+
+.resume-rstc img {
+    max-height: 11em;
+    max-height: 11em;
+    border-radius: 50%;
+    mask-image: radial-gradient(closest-side, var(--second-color) 97%, transparent 100%)
+}
+
+//list
+.resume-wc ul {
+    margin: .25em 0 1em;
+    padding: 0;
+}
+
+.resume-wc li {
+    list-style: none;
+    position: relative;
+    padding: 0 0 0 1em;
+}
+
+.cross li::before {
+    content: "";
+    position: absolute;
+    height: .5em;
+    border-left: .125em solid var(--third-color);
+    transform: rotate(45deg);
+    top: .5em;
+    left: .25em;
+}
+
+.cross li::after {
+    content: "";
+    position: absolute;
+    height: .5em;
+    border-left: .125em solid var(--third-color);
+    transform: rotate(-45deg);
+    top: .5em;
+    left: .25em;
+}
+
+@media screen and (max-width: 55em) {
+    .resume-container {
+        display: flex;
+        width: 100%;
+        flex-flow: column;
+        align-items: center;
+        padding: 0 2em 0 2em;
+    }
+    .resume-wc {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%;
+    }
+    .resume-c,
+    .resume-o,
+    .resume-e,
+    .resume-rbc {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .resume-cbc {
+        max-width: 15em;
+    }
+}

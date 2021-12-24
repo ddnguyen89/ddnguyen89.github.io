@@ -1,0 +1,100 @@
+.projects-container {
+    display: inline-flex;
+    max-width: 50em;
+    margin-left: auto;
+    margin-right: auto;
+    flex-flow: column;
+    align-items: center;
+    column-gap: 1em;
+    flex: 1;
+}
+
+.projects-bc {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+}
+
+.projects-c,
+.projects-p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.projects-ctc,
+.projects-ptc {
+    margin-bottom: 1em;
+}
+
+.projects-cbc,
+.projects-pbc {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.projects-cbc a i {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--first-color);
+    font-size: 4em;
+}
+
+.down-arrow {
+    margin-bottom: 1em;
+}
+
+//github icon
+.projects-cbc a i,
+.projects-cbc a i:after,
+.projects-cbc a i:before {
+    transition: all .5s;
+}
+
+.projects-cbc a i {
+    position: relative;
+}
+
+.projects-cbc a i:hover {
+    color: var(--third-color);
+    transform: rotate(-10deg);
+}
+
+//personal icon
+.projects-pbc img {
+    max-height: 3.5em;
+}
+
+.projects-pbc div {
+    background: var(--first-color);
+    border-radius: 50%;
+}
+
+.projects-pbc div:hover {
+    background: var(--third-color);
+    border-radius: 50%;
+    transform: rotate(-10deg);
+}
+
+.projects-pbc div,
+.projects-pbc div:after,
+.projects-pbc div:before {
+    transition: all .5s;
+}
+
+@media screen and (max-width: 55em) {
+    .projects-container {
+        display: flex;
+        width: 100%;
+        flex-flow: column;
+        align-items: center;
+        padding: 0 2em 0 2em;
+    }
+    .projects-bc {
+        flex-direction: column;
+        gap: 2em;
+    }
+}

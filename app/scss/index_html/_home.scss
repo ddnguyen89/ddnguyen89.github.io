@@ -1,0 +1,149 @@
+.home-container {
+    margin-top: 5em;
+    max-height: 24em;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+    column-gap: 1em;
+    flex: 1;
+}
+
+.home-tc {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 5em;
+    flex-direction: column;
+    flex: 1;
+    gap: 2em;
+}
+
+.home-ic {
+    position: relative;
+    display: flex;
+    flex: 1;
+    order: 2;
+}
+
+.home-ic img {
+    max-height: 23em;
+    border-radius: 50%;
+    mask-image: radial-gradient(closest-side, var(--second-color) 98%, transparent 100%)
+}
+
+.home-sc {
+    position: relative;
+    display: block;
+    justify-content: center;
+    flex: 1;
+}
+
+.t1 {
+    position: relative;
+    display: block;
+    font-size: 2em;
+    font-weight: 700;
+    flex-shrink: 0;
+    flex: 1;
+}
+
+.t2 {
+    position: relative;
+    margin-left: .25em;
+    font-size: 6.5em;
+    font-weight: 700;
+    flex: 1;
+}
+
+.t3 {
+    position: relative;
+    display: block;
+    font-size: 2em;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-left: 2.5em;
+    flex: 1;
+}
+
+.exclamation {
+    font-size: 1em;
+    font-weight: 900;
+    margin-left: .125em;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1em;
+}
+
+.social-icons a,
+.social-icons a:after,
+.social-icons a:before {
+    transition: all .5s;
+}
+
+.social-icons a {
+    display: inline-block;
+    height: 2em;
+    width: 2em;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 50%;
+    color: var(--first-color) !important;
+    text-align: center;
+    font-size: 1.5em;
+    padding-top: .4em;
+}
+
+.social-icons a:hover {
+    color: var(--third-color) !important;
+    transform: scale(1.125);
+    transition: .2s ease-out;
+}
+
+@media screen and (max-width: 55em) {
+    .home-container {
+        margin-top: 0em;
+        display: flex;
+        max-height: fit-content;
+        flex-flow: column;
+        align-items: center;
+    }
+    .home-sc {
+        display: flex;
+        width: 100%;
+        order: 2;
+    }
+    .social-icons {
+        gap: 1em;
+    }
+}
+
+@media screen and (max-width:30em) {
+    .home-ic img {
+        max-height: 20em;
+        border-radius: 50%;
+        mask-image: radial-gradient(closest-side, var(--second-color) 98%, transparent 100%)
+    }
+    .t1 {
+        font-size: 1.5em;
+        font-weight: 700;
+        flex-shrink: 0;
+    }
+    .t2 {
+        margin-left: .25em;
+        font-size: 5.5em;
+        font-weight: 700;
+    }
+    .t3 {
+        font-size: 1.5em;
+        font-weight: 700;
+        flex-shrink: 0;
+        margin-left: 3.5em;
+    }
+}
