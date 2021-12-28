@@ -48,7 +48,7 @@ header {
 
 .nav-menuc {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     flex: 2;
 }
 
@@ -141,7 +141,7 @@ header a:hover:after {
         width: 100%;
     }
     .toggle a {
-        justify-content: end;
+        justify-content: flex-end;
     }
     .logohead {
         margin: 0em;
