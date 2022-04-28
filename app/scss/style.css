@@ -640,6 +640,10 @@ header a:hover:after {
           flex: 2;
 }
 
+.int-separator {
+  display: none;
+}
+
 .inter-slide {
   display: none;
 }
@@ -804,6 +808,12 @@ header a:hover:after {
 }
 
 @media screen and (max-width: 55em) {
+  .int-separator {
+    position: relative;
+    display: block;
+    visibility: hidden;
+    margin: 1em;
+  }
   .inter-container {
     display: -webkit-box;
     display: -ms-flexbox;
